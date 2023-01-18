@@ -18,16 +18,22 @@ public class Ejemplo02 {
     
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+            
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese el limite");
         int limite = entrada.nextInt();
-        int valorA = obtenerNumero(limite); // 3
-        int valorB = obtenerNumero(limite); // 2
-        int suma = obtnerSuma(valorA, valorB);
-        System.out.printf("La suma de %d + %d es igual a: %d\n", 
-                valorA,
-                valorB,
-                suma);
+        if (limite > 0) {
+            int valorA = obtenerNumero(limite); // 3
+            int valorB = obtenerNumero(limite);
+            int suma = obtenerSuma(valorA, valorB);
+                 System.out.printf("La suma de %d + %d es igual a: %d\n", 
+                valorA, valorB, suma);
+        }else{
+            System.out.println("Valor no valido");
+        }
+
     }
     
     public static int obtenerNumero(int limite) {
@@ -40,7 +46,7 @@ public class Ejemplo02 {
         return valorAleatorio;
     }
     
-    public static int obtnerSuma(int a, int b){
+    public static int obtenerSuma(int a, int b){
         return a + b;
     }
     
